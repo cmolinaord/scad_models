@@ -44,9 +44,9 @@ z_space = 9;
 z_belt = 6;
 z_gap = 0.5*(z_space-z_rod);
 
-d_rod = 13; //13mm
-d_hole = 7;
-d_shaft = 4;
+d_rod = 13/2; //13mm
+d_hole = 7/2;
+d_shaft = 4/2;
 d_belt = 1;
 
 
@@ -91,7 +91,7 @@ difference() {
 
 
 
-translate([3.2*d_rod,0,0])
+translate([4*d_rod,0,0])
 
 difference() {
     union(){  
@@ -102,7 +102,7 @@ difference() {
     translate([0,0,-0.1]) cylinder(z_IR_A+0.2,d_shaft+0.2,d_shaft+0.2);
 }
 
-translate([3.2*d_rod,0,0])
+translate([4*d_rod,0,0])
 difference() {
     difference() {
         union() {
