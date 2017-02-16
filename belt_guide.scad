@@ -20,6 +20,7 @@ d_belt = 1;
 */
 
 // Medidas en pixeles
+// Hay que traducirlas a m
 
 z_plate = 123.1;
 z_rod = 224;
