@@ -1,3 +1,9 @@
+// Version v_2
+// Disminuido grosor de la placa fina de la arandela exterior
+// para que sea menor (la midad) que la de la arandela interior y
+// no roze con el soporte metalico
+
+
 // IR = inner ring
 // OR = outter ring
 
@@ -20,7 +26,6 @@ d_belt = 1;
 */
 
 // Medidas en pixeles
-// Hay que traducirlas a m
 
 //d_rod = 13mm
 /*
@@ -60,10 +65,10 @@ z_IR_A = z_gap+z_plate;
 z_IR_B = z_gap;
 
 // derivadas Outter ring
-z_OR_A = 0.5*z_space - 0.0;
-z_OR_B = z_gap;
-z_OR_C = 0.5*(z_space - z_belt) - 0.0;
-d_OR_d = 2*d_belt;
+z_OR_A = 0.5*z_space - 0.5*z_gap;
+z_OR_B = 0.5*z_gap;
+z_OR_C = 0.5*(z_space - z_belt) - 0.5*z_gap;
+d_OR_d = 2*d_belt-0.5*z_gap;
 
 
 difference() {
