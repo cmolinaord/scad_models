@@ -20,6 +20,7 @@ d_belt = 1;
 */
 
 // Medidas en pixeles
+// Hay que traducirlas a m
 
 //d_rod = 13mm
 /*
