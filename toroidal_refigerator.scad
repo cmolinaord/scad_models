@@ -1,6 +1,7 @@
 $fn = 50;
+pi = 3.14;
 
-H = 5; // Heigth of torus
+H = 3; // Heigth of torus
 S_max = 8; // Maximum width of torus
 S_min = 1.5; // Minumum width of torus
 D_outer = 20;
@@ -11,9 +12,12 @@ h = 1; // Diameter of holes
 N = 20; // Number of holes
 s = 0.2; // Thickness of walls
 
-difference(){
+echo("Area entrada:",(S_max-2*s)*(H+B-2*s));
+echo("Area salida:",N*pi*h*h);
+
 
 difference(){
+
 union(){
 difference(){
     difference(){
@@ -38,8 +42,7 @@ difference(){
         translate([x,0,-0.1*s]) cylinder(2*B,D_inner + 2*s,D_inner + 2*B + 2*s);
     }
 }
-}
-translate([0,D_outer,0.8*H]) cube([2.2*D_outer,2*D_outer,2*H], true);
+
 }
 
 translate([x,0,H])
